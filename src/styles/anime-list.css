@@ -1,5 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@400;600;800&display=swap");
 
-.anime-list {
-  font-family: "Quicksand";
+* {
+  font-family: "Dosis";
+  font-weight: 600;
+}
+
+.anime-list-container {
+  padding: 10px 55px;
+}
+.anime-list-container h1 {
+  font-family: "Dosis";
+  font-weight: 600;
+  font-size: 36px;
+  color: white;
 }

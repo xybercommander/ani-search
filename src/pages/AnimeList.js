@@ -16,11 +16,17 @@ const AnimeList = () => {
   return (
     <div className="anime-list">
       <Navbar />
-      <h1>Anime List Page</h1>
       {isPending && <h2>Loading...</h2>}
       {error && <h2>{error}</h2>}
       {animeData && (
-        <h4>{`Total count of anime found : ${animeData["data"]["documents"].length}`}</h4>
+        <div className="anime-list-container">
+          <h1>{`Total count of anime found : ${animeData["data"]["documents"].length}`}</h1>
+          {animeData["data"]["documents"].map((anime) => (
+            <div>
+              <p>{anime["titles"]["en"]}</p>
+            </div>
+          ))}
+        </div>
       )}
     </div>
   );
