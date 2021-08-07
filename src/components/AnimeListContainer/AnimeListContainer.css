@@ -1,9 +1,8 @@
-.anime-list-container {
-  width: 660px;
-  height: 200px;
-  background-color: white;
-}
-
-/* .alc-cover-img {
+/* .anime-list-container {
   
 } */
+
+.anime-list-container-bg-color {
+  width: 660px;
+  height: 200px;
+}

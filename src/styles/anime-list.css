@@ -7,10 +7,19 @@
 
 .anime-list-data {
   padding: 10px 55px;
+  width: 75%;
 }
+
 .anime-list-data h1 {
+  padding-bottom: 30px;
   font-family: "Dosis";
   font-weight: 600;
   font-size: 36px;
   color: white;
+}
+
+.anime-list-data-grid {
+  display: grid;
+  grid-template-columns: auto auto;
+  row-gap: 30px;
 }
