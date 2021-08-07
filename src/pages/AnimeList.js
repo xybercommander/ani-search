@@ -3,6 +3,7 @@ import useFetch from "../hooks/useFetch";
 import "../styles/anime-list.css";
 import { useParams } from "react-router";
 import Navbar from "../components/Navbar/Navbar";
+import AnimeListContainer from "../components/AnimeListContainer/AnimeListContainer";
 
 const AnimeList = () => {
   const { name } = useParams();
@@ -19,9 +20,11 @@ const AnimeList = () => {
       {isPending && <h2>Loading...</h2>}
       {error && <h2>{error}</h2>}
       {animeData && (
-        <div className="anime-list-container">
+        <div className="anime-list-data">
           <h1>{`Total count of anime found : ${animeData["data"]["documents"].length}`}</h1>
-          <p>{JSON.stringify(animeData["data"]["documents"][0])}</p>
+          {animeData["data"]["documents"].map((anime) => (
+            <AnimeListContainer title={anime["titles"]["en"]} />
+          ))}
         </div>
       )}
     </div>
