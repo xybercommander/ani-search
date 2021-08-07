@@ -28,6 +28,7 @@ const AnimeList = () => {
                 title={anime["titles"]["en"]}
                 bannerImg={anime["banner_image"]}
                 coverImg={anime["cover_image"]}
+                description={anime["descriptions"]}
               />
             ))}
           </div>
