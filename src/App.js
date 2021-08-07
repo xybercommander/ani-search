@@ -2,7 +2,7 @@ import React from "react";
 import { Route } from "react-router-dom";
 import MainPage from "./pages/MainPage";
 import AnimeList from "./pages/AnimeList";
-import TopBackground from "./components/TopBackground";
+import TopBackground from "./components/TopBackground/TopBackground";
 
 function App() {
   return (
