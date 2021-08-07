@@ -1,7 +1,13 @@
 import React from "react";
 import "./AnimeListContainer.css";
 
-const AnimeListContainer = ({ title, bannerImg, coverImg, description }) => {
+const AnimeListContainer = ({
+  title,
+  bannerImg,
+  coverImg,
+  description,
+  startDate,
+}) => {
   return (
     <div
       className="anime-list-container-bg-color"
@@ -56,7 +62,7 @@ const AnimeListContainer = ({ title, bannerImg, coverImg, description }) => {
             )}
           </div>
           <div className="alc-details">
-            <p>Started: 1999-10-20</p>
+            <p>Started: {Date(startDate).toString()}</p>
             <p>Current status: Airing</p>
           </div>
         </div>

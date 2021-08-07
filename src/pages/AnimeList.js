@@ -29,6 +29,7 @@ const AnimeList = () => {
                 bannerImg={anime["banner_image"]}
                 coverImg={anime["cover_image"]}
                 description={anime["descriptions"]}
+                startDate={anime["start_date"]}
               />
             ))}
           </div>
