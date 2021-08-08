@@ -21,6 +21,7 @@
 .anime-list-data-grid {
   display: grid;
   grid-template-columns: auto auto;
+  column-gap: 30px;
   row-gap: 30px;
 }
 
@@ -30,9 +31,11 @@
 
 .full-anime-character {
   margin-left: 100px;
-  height: 800px;
+  height: 750px;
   width: 400px;
   background-image: url("../assets/gojo_full_img.png");
+  background-size: contain;
   background-repeat: no-repeat;
   position: sticky;
+  top: 140px;
 }
