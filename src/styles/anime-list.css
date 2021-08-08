@@ -7,7 +7,7 @@
 
 .anime-list-data {
   padding: 10px 55px;
-  width: 75%;
+  width: 100%;
 }
 
 .anime-list-data h1 {
@@ -22,4 +22,17 @@
   display: grid;
   grid-template-columns: auto auto;
   row-gap: 30px;
+}
+
+.anime-list-data-items {
+  display: flex;
+}
+
+.full-anime-character {
+  margin-left: 100px;
+  height: 800px;
+  width: 400px;
+  background-image: url("../assets/gojo_full_img.png");
+  background-repeat: no-repeat;
+  position: sticky;
 }

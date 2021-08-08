@@ -21,20 +21,23 @@ const AnimeList = () => {
       {error && <h2>{error}</h2>}
       {animeData && (
         <div className="anime-list-data">
-          <h1>{`Total count of anime found : ${animeData["data"]["documents"].length}`}</h1>
-          <div
-            className="anime-list-data-grid"
-            style={{ overflowX: "hidden", overflowY: "auto" }}
-          >
-            {animeData["data"]["documents"].map((anime) => (
-              <AnimeListContainer
-                title={anime["titles"]["en"]}
-                bannerImg={anime["banner_image"]}
-                coverImg={anime["cover_image"]}
-                description={anime["descriptions"]}
-                startDate={anime["start_date"]}
-              />
-            ))}
+          <div className="anime-list-data-items">
+            <div className="anime-list-container-items">
+              <h1>{`Total count of anime found : ${animeData["data"]["documents"].length}`}</h1>
+              <div className="anime-list-data-grid">
+                {animeData["data"]["documents"].map((anime) => (
+                  <AnimeListContainer
+                    key={anime["anilist_id"]}
+                    title={anime["titles"]["en"]}
+                    bannerImg={anime["banner_image"]}
+                    coverImg={anime["cover_image"]}
+                    description={anime["descriptions"]}
+                    startDate={anime["start_date"]}
+                  />
+                ))}
+              </div>
+            </div>
+            <div className="full-anime-character"></div>
           </div>
         </div>
       )}
