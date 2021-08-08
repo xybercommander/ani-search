@@ -14,6 +14,6 @@
   height: 45vh;
   background-color: #007cef;
   opacity: 0.9;
-  position: absolute;
+  position: fixed;
   z-index: -1;
 }
