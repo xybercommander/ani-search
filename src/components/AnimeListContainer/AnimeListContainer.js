@@ -1,4 +1,5 @@
 import React from "react";
+import useCorrectDate from "../../hooks/useCorrectDate";
 import "./AnimeListContainer.css";
 
 const AnimeListContainer = ({
@@ -8,6 +9,8 @@ const AnimeListContainer = ({
   description,
   startDate,
 }) => {
+  const correctStartDate = useCorrectDate(startDate);
+
   return (
     <div
       className="anime-list-container-bg-color"
@@ -62,7 +65,7 @@ const AnimeListContainer = ({
             )}
           </div>
           <div className="alc-details">
-            <p>Started: {Date(startDate).toString()}</p>
+            <p>Started: {correctStartDate}</p>
             <p>Current status: Airing</p>
           </div>
         </div>
