@@ -22,7 +22,10 @@ const AnimeList = () => {
       {animeData && (
         <div className="anime-list-data">
           <h1>{`Total count of anime found : ${animeData["data"]["documents"].length}`}</h1>
-          <div className="anime-list-data-grid">
+          <div
+            className="anime-list-data-grid"
+            style={{ overflowX: "hidden", overflowY: "auto" }}
+          >
             {animeData["data"]["documents"].map((anime) => (
               <AnimeListContainer
                 title={anime["titles"]["en"]}

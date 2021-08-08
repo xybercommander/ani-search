@@ -54,7 +54,10 @@ const AnimeListContainer = ({
             margin: "0 20px",
           }}
         >
-          <h2 className="alc-title" style={{ color: "black" }}>
+          <h2
+            className="alc-title"
+            style={{ color: "black", padding: "2px 0" }}
+          >
             {title}
           </h2>
           <div className="alc-description">

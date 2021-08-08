@@ -2,7 +2,10 @@
 
 .alc-title {
   font-weight: 800;
-  font-size: 28px;
+  font-size: 26px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .alc-description {
@@ -12,6 +15,7 @@
   overflow: hidden;
   max-height: 3.6em;
   line-height: 1.2em;
+  margin-bottom: 8px;
 }
 
 .alc-details p {
