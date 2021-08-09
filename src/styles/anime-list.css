@@ -5,6 +5,14 @@
   font-weight: 600;
 }
 
+.loading {
+  padding: 2px 60px;
+  font-family: "Dosis";
+  font-weight: 600;
+  font-size: 36px;
+  color: white;
+}
+
 .anime-list-data {
   padding: 10px 55px;
   width: 100%;

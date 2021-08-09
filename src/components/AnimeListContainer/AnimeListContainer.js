@@ -8,8 +8,15 @@ const AnimeListContainer = ({
   coverImg,
   description,
   startDate,
+  status,
 }) => {
   const correctStartDate = useCorrectDate(startDate);
+  const animeStatus = (status) => {
+    if (status === 0) return "Finished";
+    else if (status === 1) return "Airing";
+    else if (status === 2) return "Not yet released";
+    else if (status === 3) return "Cancelled";
+  };
 
   return (
     <div
@@ -34,7 +41,7 @@ const AnimeListContainer = ({
           </div>
           <div className="alc-details">
             <p>Started: {correctStartDate}</p>
-            <p>Current status: Airing</p>
+            <p>Status: {animeStatus(status)}</p>
           </div>
         </div>
       </div>

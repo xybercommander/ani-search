@@ -17,7 +17,7 @@ const AnimeList = () => {
   return (
     <div className="anime-list">
       <Navbar />
-      {isPending && <h2>Loading...</h2>}
+      {isPending && <h2 className="loading">Loading...</h2>}
       {error && <h2>{error}</h2>}
       {animeData && (
         <div className="anime-list-data">
@@ -33,6 +33,7 @@ const AnimeList = () => {
                     coverImg={anime["cover_image"]}
                     description={anime["descriptions"]}
                     startDate={anime["start_date"]}
+                    status={anime["status"]}
                   />
                 ))}
               </div>
