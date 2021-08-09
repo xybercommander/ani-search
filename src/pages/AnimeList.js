@@ -34,6 +34,7 @@ const AnimeList = () => {
                     description={anime["descriptions"]}
                     startDate={anime["start_date"]}
                     status={anime["status"]}
+                    genre={anime["genres"]}
                   />
                 ))}
               </div>

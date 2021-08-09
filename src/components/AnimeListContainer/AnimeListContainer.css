@@ -52,7 +52,17 @@
   margin-bottom: 8px;
 }
 
+.alc-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .alc-details p {
   font-size: 14px;
   font-weight: 400;
+}
+
+.alc-genres {
+  display: flex;
 }

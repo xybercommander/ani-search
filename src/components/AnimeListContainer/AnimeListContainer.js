@@ -1,5 +1,6 @@
 import React from "react";
 import useCorrectDate from "../../hooks/useCorrectDate";
+import GenreChip from "../GenreChip/GenreChip";
 import "./AnimeListContainer.css";
 
 const AnimeListContainer = ({
@@ -9,8 +10,11 @@ const AnimeListContainer = ({
   description,
   startDate,
   status,
+  genre,
 }) => {
   const correctStartDate = useCorrectDate(startDate);
+  const genreText1 = genre[0];
+  const genreText2 = genre[1];
   const animeStatus = (status) => {
     if (status === 0) return "Finished";
     else if (status === 1) return "Airing";
@@ -40,8 +44,14 @@ const AnimeListContainer = ({
             )}
           </div>
           <div className="alc-details">
-            <p>Started: {correctStartDate}</p>
-            <p>Status: {animeStatus(status)}</p>
+            <div className="alc-left-data">
+              <p>Started: {correctStartDate}</p>
+              <p>Status: {animeStatus(status)}</p>
+            </div>
+            <div className="alc-genres">
+              <GenreChip genreText={genreText1} />
+              <GenreChip genreText={genreText2} />
+            </div>
           </div>
         </div>
       </div>
