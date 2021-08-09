@@ -1,6 +1,40 @@
 @import url("https://fonts.googleapis.com/css2?family=Dosis:wght@400;600;800&display=swap");
 
+.anime-list-container-bg-color {
+  border-radius: 12px;
+  background-size: cover;
+  width: 660px;
+  height: 200px;
+  z-index: 2;
+  display: flex;
+}
+
+.anime-list-container {
+  border-radius: 0 10px 10px 0;
+  filter: grayscale(90%);
+  background-color: white;
+  opacity: 0.9;
+}
+
+.alc-data {
+  height: 200px;
+  width: 485px;
+  padding: 20px 0;
+  margin: 0 20px;
+}
+
+.alc-cover-img {
+  border-radius: 10px 0 0 10px;
+  width: 150px;
+  height: 200px;
+  background-size: "cover";
+  opacity: 1;
+  z-index: 1;
+}
+
 .alc-title {
+  color: black;
+  padding: 2px 0;
   font-weight: 800;
   font-size: 26px;
   text-overflow: ellipsis;
