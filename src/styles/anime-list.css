@@ -6,7 +6,12 @@
 }
 
 .loading {
-  padding: 2px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 380px;
   font-family: "Dosis";
   font-weight: 600;
   font-size: 36px;

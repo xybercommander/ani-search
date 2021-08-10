@@ -1,6 +1,7 @@
 import React from "react";
 import useFetch from "../hooks/useFetch";
 import "../styles/anime-list.css";
+import Loader from "react-loader-spinner";
 import { useParams } from "react-router";
 import Navbar from "../components/Navbar/Navbar";
 import AnimeListContainer from "../components/AnimeListContainer/AnimeListContainer";
@@ -17,7 +18,18 @@ const AnimeList = () => {
   return (
     <div className="anime-list">
       <Navbar />
-      {isPending && <h2 className="loading">Loading...</h2>}
+      {isPending && (
+        <div className="loading">
+          <Loader
+            type="Bars"
+            color="white"
+            height={100}
+            width={100}
+            timeout={3000} //3 secs
+          />
+          <h2>Loading</h2>
+        </div>
+      )}
       {error && <h2>{error}</h2>}
       {animeData && (
         <div className="anime-list-data">
