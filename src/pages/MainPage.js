@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar/Navbar";
 import "../styles/main-page.css";
+import { FiSearch } from "react-icons/fi";
 
 const MainPage = () => {
   const [text, setText] = useState("");
@@ -22,22 +23,28 @@ const MainPage = () => {
   return (
     <div className="main-page">
       <Navbar />
-      <h1>Main Page</h1>
-      <form onSubmit={handleSubmit}>
-        <label>Search</label>
-        <input
-          type="text"
-          placeholder="Search Anime Name"
-          onChange={(e) => setText(e.target.value)}
-        />
-        <Link
-          to={{
-            pathname: `/anime-list/${text}`,
-          }}
-        >
-          <input type="submit" value="Submit" />
-        </Link>
-      </form>
+      <div className="main-page-data">
+        <h1>Search for an Anime</h1>
+        <form onSubmit={handleSubmit}>
+          <div className="input-container">
+            <div className="search-icon">
+              <FiSearch size="20px" />
+            </div>
+            <input
+              type="text"
+              placeholder="Search Anime Name"
+              onChange={(e) => setText(e.target.value)}
+            />
+            <Link
+              to={{
+                pathname: `/anime-list/${text}`,
+              }}
+            >
+              <input type="submit" value="Submit" />
+            </Link>
+          </div>
+        </form>
+      </div>
     </div>
   );
 };
