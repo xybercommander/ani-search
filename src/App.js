@@ -4,6 +4,7 @@ import MainPage from "./pages/MainPage";
 import AnimeList from "./pages/AnimeList";
 import TopBackground from "./components/TopBackground/TopBackground";
 
+// This is the App Component where i am using React.js
 function App() {
   return (
     <div className="App">
